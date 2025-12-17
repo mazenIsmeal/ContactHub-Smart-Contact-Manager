@@ -11,8 +11,7 @@ var addBtn = document.getElementById("add");
 var updateBtn = document.getElementById("update");
 var fav = document.getElementById("favoritt");
 var emergency = document.getElementById("emergency");
-var allProducts =
-  JSON.parse(localStorage.getItem("items")) || "Click the addContact";
+var allProducts = JSON.parse(localStorage.getItem("items")) || [];
 var updateItem;
 
 displayItem();
@@ -352,7 +351,20 @@ function displayFav() {
   document.getElementById("favorites").innerHTML = htmlMarkUp;
 }
 
+// function getChartname(fullname) {
+//   var parts = fullname.trim().split(" ");
+//   if (parts.length === 1) {
+//     return parts[0].substring(0, 1).toUpperCase();
+//   }
+
+//   return (parts[0][0] + parts[1][0]).toUpperCase();
+// }
+
 function getChartname(fullname) {
+  if (!fullname || typeof fullname !== "string") {
+    return ""; // أو أي قيمة افتراضية تحب ترجعها
+  }
+
   var parts = fullname.trim().split(" ");
   if (parts.length === 1) {
     return parts[0].substring(0, 1).toUpperCase();
