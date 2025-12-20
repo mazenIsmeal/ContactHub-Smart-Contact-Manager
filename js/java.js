@@ -114,7 +114,7 @@ function displayItem(arr = allProducts) {
 
   for (var i = 0; i < arr.length; i++) {
     htmlMarkUp += `
-    <div class="col-6 mb-2">
+    <div class="col-sm-12 col-md-6 mb-2">
       <div class="box bg-light">
     <div class="header-box d-flex align-items-center gap-2">
       <div class="wrapper-image">
@@ -172,7 +172,7 @@ function displayItem(arr = allProducts) {
     "counterLength"
   ).innerHTML = `Manage and organize your ${allProducts.length} contacts`;
 }
-// <i class="fa-solid fa-star"></i>
+
 // live image
 imageInput.onchange = function () {
   var reader = new FileReader();
@@ -218,7 +218,7 @@ function saveItem() {
   localStorage.setItem("items", JSON.stringify(allProducts));
 }
 
-// update item contact
+// update item contact (input)
 function updateItemContact(id) {
   addBtn.classList.add("d-none");
   updateBtn.classList.remove("d-none");
@@ -234,7 +234,7 @@ function updateItemContact(id) {
 
   document.getElementById("title").innerHTML = "Edit Contact";
 }
-
+// update item contact
 function updateContact() {
   firstChart = inputName.value.charAt(0);
   if (imageInput.files[0]) {
