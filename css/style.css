@@ -197,15 +197,6 @@ header .navbar .right-top img {
   /* display: none; */
 }
 
-/* width: 50px;
-    height: 50px;
-    position: relative;
-    border-radius: 0.625rem;
-    background-color: #fb7b00;
-    text-align: center;
-    overflow: hidden;
-    color: #fff;
-    font-weight: bold; */
 #sec-2 .berant .contant .card-fav {
   background-color: #f7f6f6;
   display: flex;
@@ -686,4 +677,10 @@ header .navbar .right-top .add-btn:hover {
 .footer-box .fa-pen:hover {
   background-color: #ede9fe;
   color: var(--color);
+}
+
+@media screen and (max-width: 438px) {
+  .sec-1 .inner .total-3 .color-p {
+    font-size: 14px;
+  }
 }
